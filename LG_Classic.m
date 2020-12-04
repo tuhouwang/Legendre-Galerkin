@@ -42,7 +42,7 @@ end
 [V, kr]  = eig(A, B);
 kr       = sqrt(diag(kr));
 
-% PrintWavenumbers(kr,casename);
+% ShowWavenumbers(kr,casename);
 
 d = 1.0 ./ sqrt(diag(V.' * B * V));
 V = V * diag(d ./ sqrt(H / 2));
