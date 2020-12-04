@@ -1,10 +1,10 @@
 # Legendre-Galerkin
 Three Legendre-Galerkin Spectral Methods for Solving Normal Modes of Underwater Acoustic Propagation
-```latex
+$$
 \rho(z)\frac{\mathrm{d}}{\mathrm {d}z}\left(
         \frac{1}{\rho(z)}\frac{\mathrm{d}\psi(z)}{\mathrm {d}z}
     \right) + k^2(z)\psi(z) = k_r^2 \psi(z)
-```
+$$
 
 ```latex
     \frac{\mathrm{d}}{\mathrm {d}z}\left(
