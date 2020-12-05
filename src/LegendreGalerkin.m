@@ -59,3 +59,5 @@ psi = InvLGClassic(V,xr);
 tl  = SynthesizeSoundField(r,zr,zs,kr,rhozs,psi);
 
 ShowSoundField(r,zr,tl,tlmin,tlmax,casename);
+
+toc
