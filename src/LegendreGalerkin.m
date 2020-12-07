@@ -24,8 +24,8 @@ k  = omega ./ c .* (1.0 + 1i * alpha / (40.0*pi*log10(exp(1.0))));
 k  = k .^2;
 
 
-% [L,Lp] = ModifiedLegpolyEvans(N, x);
-[L,Lp] = ModifiedLegpolyClassic(N, x);
+[L,Lp] = ModifiedLegpolyEvans(N, x);
+% [L,Lp] = ModifiedLegpolyClassic(N, x);
 % [L,Lp] = ModifiedLegpolyShenjie(N, x);
 
 A = zeros(N-1,N-1);
@@ -50,10 +50,10 @@ kr       = sqrt(diag(kr));
 d = 1.0 ./ sqrt(diag(V.' * B * V));
 V = V * diag(d ./ sqrt(H / 2));
 
-[nmodes,kr,V] = NumofModes(omega,kr,V,cpmax);
+[nmodes,kr,V] = NumOfModes(omega,kr,V,cpmax);
 
-% psi = InvLGEvans(V,xr);
-psi = InvLGClassic(V,xr);
+psi = InvLGEvans(V,xr);
+% psi = InvLGClassic(V,xr);
 % psi = InvLGShenjie(V,xr);
 
 tl  = SynthesizeSoundField(r,zr,zs,kr,rhozs,psi);
