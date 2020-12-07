@@ -1,10 +1,13 @@
-function ShowWavenumbers(kr,casename)
+function ShowWavenumbers(kr, casename)
+
+    disp('plot the modal wavenumbers!');
 
     figure;
-    disp('plot the modal wavenumbers!');    
-    plot(real(kr),imag(kr),'r*');grid on;
-    xlabel('Real Wave Number (1/m)');title(casename);
-    ylabel('Imaginary Wave Number (1/m)');
-    set(gca,'FontSize',14,'FontName','Times New Roman');
+    plot(real(kr), imag(kr), 'r*');
+
+    title (casename);
+    xlabel('Real Wavenumber (1/m)');
+    ylabel('Imaginary Wavenumber (1/m)');
+    set   (gca, 'FontSize', 16, 'FontName', 'Times New Roman');
 
 end
