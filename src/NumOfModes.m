@@ -1,15 +1,18 @@
-function [nmodes, kr, v1, v2] = NumOfModes(w, kr, v1, v2, cpmax)
+function [nmodes, kr, V] = NumOfModes(omega, kr, V, cpmax)
 
-    cp     = w ./ real(kr);
+    [~, ind] = sort(real(kr), 'descend');
+    kr       = kr(   ind);
+    V        = V (:, ind);
 
+    cp = omega ./ real(kr);
+    
     nmodes = length( find( cp <= cpmax ) );
 
-    if(nmodes == 0)
+    if (nmodes == 0)
         error('Incorrect maximum phase speed input!');
     end
 
-    kr = kr(   1 : nmodes);
-    v1 = v1(:, 1 : nmodes);
-    v2 = v2(:, 1 : nmodes);
-    
+    kr = kr(   1:nmodes);
+    V  = V (:, 1:nmodes);
+
 end

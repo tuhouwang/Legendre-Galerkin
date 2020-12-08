@@ -1,4 +1,4 @@
-function integral = LGQuadrature(f,w)
+function integral = LGQuadrature(f, w)
  
     n  = length(f);
     integral = 0;

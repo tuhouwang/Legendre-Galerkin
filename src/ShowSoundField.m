@@ -1,4 +1,4 @@
-function ShowSoundField(r,z,tl,tlmin,tlmax,casename)
+function ShowSoundField(r, z, tl, tlmin, tlmax, casename)
 
     figure;
     disp('plot the transmission loss field!');

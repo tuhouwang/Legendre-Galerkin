@@ -1,6 +1,6 @@
-function [L,Lp] = ModifiedLegpolyClassic(N, x)
+function [L, Lp] = ModifiedLegpolyClassic(N, x)
     
-    [L,Lp] = legpoly(N, x);
+    [L, Lp] = legpoly(N, x);
 
     for k = 3 : N+1
         if(mod(k, 2) == 1)
@@ -12,7 +12,7 @@ function [L,Lp] = ModifiedLegpolyClassic(N, x)
         end
     end
     
-    L  = L (:,3:N+1);
-    Lp = Lp(:,3:N+1);
+    L  = L (:, 3 : N + 1);
+    Lp = Lp(:, 3 : N + 1);
 
 end
