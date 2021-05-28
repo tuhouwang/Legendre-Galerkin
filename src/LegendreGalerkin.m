@@ -10,7 +10,7 @@ omega  = 2 * pi * freq;
 nr     = rmax / dr;
 r      = dr : dr : rmax;
 
-[x, w] = legpts(nz);
+[x, w, ~] = LGLnodes(nz);
 z  = (1 + x) .* H / 2.0;
 zr = 0 : dz : H;
 xr = 2 ./ H * zr' - 1;
